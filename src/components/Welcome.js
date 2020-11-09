@@ -1,9 +1,12 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 const Welcome = () => {
     return <div className="centered-container">
-        <h1>This is the Welcome page</h1>
+        <h1>Welcome to Jurassic Park, {props.user.username}</h1>
     </div>
 }
 
-export default Welcome;
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(Welcome);

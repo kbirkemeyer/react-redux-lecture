@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {loginUser} from '../redux/reducer';
 
 class Login extends Component {
     constructor(){
@@ -17,6 +19,7 @@ class Login extends Component {
 
     loginMagic = (e) => {
         e.preventDefault();
+        this.props.loginUser(this.state)
         this.props.history.push('/welcome')
     }
 
@@ -45,4 +48,5 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapStateToProps = state => state;
+export default connect(mapStateToProps, {loginUser})(Login);
