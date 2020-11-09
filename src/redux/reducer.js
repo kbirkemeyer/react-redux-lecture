@@ -1,7 +1,5 @@
 const initialState = {
-    user: {
-        username: 'Jerry'
-    }
+    user: {}
 }
 
 const LOGIN_USER = "LOGIN_USER";
