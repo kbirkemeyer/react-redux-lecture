@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+body {
+  background-color: pink;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: palevioletred;
+  height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header > div {
+  height: 100%;
+  max-width: 1000px;;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-img {
+  height: 90%;
+}
+
+.nav-links {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.nav-links > a {
+  text-decoration: none;
+  color:black;
+}
+
+.centered-container {
+  display: flex;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-container > form {
+  height: 400px;
+  width: 350px;
+  border-radius: 10%;
+  border: 3px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.centered-container > form > input {
+  padding: 10px;
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.centered-container > form > button {
+  padding: 10px;
+  font-size: 24px;
 }
